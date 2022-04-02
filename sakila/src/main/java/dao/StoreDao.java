@@ -11,7 +11,7 @@ public class StoreDao {
 		ResultSet rs = null;
 		//예외처리
 		try {
-			Class.forName("org.mariadb.jdbc.Driver");
+			Class.forName("org.mariadb.jdbc.Driver"); //드라이버 생성
 			conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/sakila","root","java1234");
 			String sql = "SELECT s1.store_id storeId, s1.manager_staff_id staffId,"
 					+ " concat(s2.first_name,' ', s2.last_name) staffName,"
