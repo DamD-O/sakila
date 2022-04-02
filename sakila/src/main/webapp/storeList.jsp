@@ -2,7 +2,7 @@
 <%@ page import="java.util.*" %>
 <%@ page import="dao.*" %>
 <%
-	StoreDao storeDao = new StoreDao();
+	StoreDao storeDao = new StoreDao(); //dao생성
 	List<Map<String, Object>> list =  storeDao.selctStoreList();
 %>
 <!DOCTYPE html>
