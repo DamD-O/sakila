@@ -27,6 +27,14 @@
 			<a href="<%=request.getContextPath()%>/staffList.jsp">Staff List</a>
 			</div>
 		</div>
+		<div class="card" >
+			<img class="card-img-top" src="<%=request.getContextPath()%>/img/actor.png" alt="Card image">
+			<div class="card-body">
+			<h4 class="card-title">배우 정보</h4>
+			<p class="card-text">actor Info</p>
+			<a href="<%=request.getContextPath()%>/actorInfoList.jsp">actor Info</a>
+			</div>
+		</div>
 	</div>
 </div>
 </body>
