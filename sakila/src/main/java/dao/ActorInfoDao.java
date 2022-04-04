@@ -7,6 +7,7 @@ import vo.ActorInfo;
 
 //페이징
 public class ActorInfoDao {
+	//목록 
 	public List<ActorInfo> selectActorInfoListByPage(int beginRow, int rowPerPage){
 		List<ActorInfo> list = new ArrayList<ActorInfo>();
 		Connection conn = null;
@@ -29,6 +30,11 @@ public class ActorInfoDao {
 				a.setLastName(rs.getString("lastName"));
 				a.setFilmInfo(rs.getString("filmInfo"));
 				list.add(a);
+				
+				System.out.println(rs.getInt("actorId") + "배우 아이디");
+				System.out.println(rs.getString("firstName") + "배우 이름");
+				System.out.println(rs.getString("lastName") + "배우 성");
+				System.out.println(rs.getString("filmInfo") + "영화정보");
 			}
 			
 		}catch (SQLException e) {
@@ -44,7 +50,7 @@ public class ActorInfoDao {
 		}
 		return list;
 	}
-	
+	//전체행
 	public int totalRow() {
 		int totalRow =0; //전체행의 개수
 		//db자원 준비
