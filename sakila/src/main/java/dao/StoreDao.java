@@ -1,5 +1,8 @@
 package dao;
 import java.util.*;
+
+import util.DBUtil;
+
 import java.sql.*;
 public class StoreDao {
 	public List<Map<String, Object>> selctStoreList(){ //다형성, List라는 인터페이스로 받음
@@ -11,8 +14,9 @@ public class StoreDao {
 		ResultSet rs = null;
 		//예외처리
 		try {
-			Class.forName("org.mariadb.jdbc.Driver"); //드라이버 생성
-			conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/sakila","root","java1234");
+			//Class.forName("org.mariadb.jdbc.Driver"); //드라이버 생성
+			//conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/sakila","root","java1234");
+			conn = DBUtil.getConnection();
 			String sql = "SELECT s1.store_id storeId, s1.manager_staff_id staffId,"
 					+ " concat(s2.first_name,' ', s2.last_name) staffName,"
 					+ " s1.address_id addressId, concat(a.address, IFNULL(a.address, ' '), district) staffAddress, "
