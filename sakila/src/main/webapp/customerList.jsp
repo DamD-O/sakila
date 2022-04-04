@@ -27,10 +27,9 @@
 	//다음 페이지
 	//페이지가 rowPerPage로 나누어떨어지지 않으면 1페이지 추가
 	if(totalRow % rowPerPage == 0){
-		//double형 형변환 (총 행수값 / 페이지 당 행수) 값을 반올림해서 int로 형변환한 값이 마지막 페이지 수 
-		lastPage = (int)(Math.ceil((double)totalRow / (double)rowPerPage));
+		lastPage = totalRow / rowPerPage;
 	}else{
-		lastPage =(int)(Math.ceil((double)totalRow / (double)rowPerPage))+1;
+		lastPage =(totalRow / rowPerPage )+1;
 	}
 	System.out.println("마지막페이지 : " + lastPage);
 	
@@ -59,7 +58,7 @@
 			<th>phone</th>
 			<th>city</th>
 			<th>country</th>
-			<th>active</th>
+			<th>notes</th>
 			<th>storeId</th>
 		</thead>
 		<tbody>
@@ -73,7 +72,7 @@
 				<td><%=c.getPhone()%></td>
 				<td><%=c.getCity()%></td>
 				<td><%=c.getCountry()%></td>
-				<td><%=c.getActive()%></td>
+				<td><%=c.getNotes()%></td>
 				<td><%=c.getStoreId()%></td>
 			</tr>
 			<%
@@ -86,7 +85,7 @@
 		<%
 			if(currentPage >1){
 		%>
-			<a href="<%=request.getContextPath()%>/customerList.jsp?curPage=<%=currentPage-1%>" class="btn btn-outline-info">이전</a>
+			<a href="<%=request.getContextPath()%>/customerList.jsp?currentPage=<%=currentPage-1%>" class="btn btn-outline-info">이전</a>
 		<%
 			}
 		%>
@@ -94,7 +93,7 @@
 		<%
 		 	if(currentPage < lastPage){
 		 %>
-		 	<a href="<%=request.getContextPath()%>/customerList.jsp?curPage=<%=currentPage+1%>" class="btn btn-outline-info">다음</a>
+		 	<a href="<%=request.getContextPath()%>/customerList.jsp?currentPage=<%=currentPage+1%>" class="btn btn-outline-info">다음</a>
 		 <% 
 		 	}
 		%>
