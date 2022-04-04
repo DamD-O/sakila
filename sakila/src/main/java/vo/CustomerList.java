@@ -8,7 +8,7 @@ public class CustomerList {
 	private String phone;
 	private String city;
 	private String country;
-	private int notes;
+	private String notes;
 	private int storeId;
 	
 	@Override
@@ -61,10 +61,10 @@ public class CustomerList {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	public int getNotes() {
+	public String getNotes() {
 		return notes;
 	}
-	public void setNotes(int notes) {
+	public void setNotes(String notes) {
 		this.notes = notes;
 	}
 	public int getStoreId() {
