@@ -7,12 +7,12 @@ public class ActorInfo {
 	private String lastName;
 	private String filmInfo;
 	
-	//특정메소드생성?
+	//최상위클래스 공부 필요.
 	@Override
-	public String toString(){
-		return this.avtorId + this.firstName + this.lastName +this.filmInfo;
+	public String toString() {
+		return "ActorInfo [avtorId=" + avtorId + ", firstName=" + firstName + ", lastName=" + lastName + ", filmInfo="
+				+ filmInfo + "]";
 	}
-	
 	
 	//setter & getter 생성
 	public int getAvtorId() {
