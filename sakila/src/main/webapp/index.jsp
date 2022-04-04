@@ -16,7 +16,7 @@
 			<div class="card-body">
 			<h4 class="card-title">매점 목록</h4>
 			<p class="card-text">store list</p>
-			<a href="<%=request.getContextPath()%>/storeList.jsp">Store List</a>
+			<a href="<%=request.getContextPath()%>/storeList.jsp">매점 리스트 보기</a>
 			</div>
 		</div>
 		<div class="card" >
@@ -24,7 +24,7 @@
 			<div class="card-body">
 			<h4 class="card-title">스태프 목록</h4>
 			<p class="card-text">staff list</p>
-			<a href="<%=request.getContextPath()%>/staffList.jsp">Staff List</a>
+			<a href="<%=request.getContextPath()%>/staffList.jsp">스태프 목록보기</a>
 			</div>
 		</div>
 		<div class="card" >
@@ -32,7 +32,7 @@
 			<div class="card-body">
 			<h4 class="card-title">배우 정보</h4>
 			<p class="card-text">actor Info</p>
-			<a href="<%=request.getContextPath()%>/actorInfoList.jsp">actor Info</a>
+			<a href="<%=request.getContextPath()%>/actorInfoList.jsp">배우 정보보기</a>
 			</div>
 		</div>
 	</div>
