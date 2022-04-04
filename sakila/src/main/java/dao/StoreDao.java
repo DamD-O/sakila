@@ -19,7 +19,7 @@ public class StoreDao {
 			conn = DBUtil.getConnection();
 			String sql = "SELECT s1.store_id storeId, s1.manager_staff_id staffId,"
 					+ " concat(s2.first_name,' ', s2.last_name) staffName,"
-					+ " s1.address_id addressId, concat(a.address, IFNULL(a.address, ' '), district) staffAddress, "
+					+ " s1.address_id addressId, concat(a.address, IFNULL(a.address, ' '), district) storeAddress, "
 					+ " s1.last_update lastUpdate"
 					+ " FROM store s1"
 					+ " INNER JOIN staff s2"
@@ -34,7 +34,7 @@ public class StoreDao {
 				map.put("staffId", rs.getInt("staffId"));
 				map.put("staffName", rs.getString("staffName"));
 				map.put("addressId", rs.getInt("addressId"));
-				map.put("staffAddress", rs.getString("staffAddress"));
+				map.put("storeAddress", rs.getString("storeAddress"));
 				map.put("lastUpdate", rs.getString("lastUpdate"));
 				list.add(map);
 			}
@@ -64,7 +64,7 @@ public class StoreDao {
 			System.out.println(m.get("staffId")+ " ");
 			System.out.println(m.get("staffName")+ " ");
 			System.out.println(m.get("addressId")+ " ");
-			System.out.println(m.get("staffAddress")+ " ");
+			System.out.println(m.get("storeAddress")+ " ");
 			System.out.println(m.get("lastUpdate")+ " ");
 			System.out.println("테스트 끝");
 		}

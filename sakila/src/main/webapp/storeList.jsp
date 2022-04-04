@@ -27,7 +27,7 @@
 				<th>staffId</th>
 				<th>staffName</th>
 				<th>addressId</th>
-				<th>staffAddress</th>
+				<th>storeAddress</th>
 				<th>lastUpdate</th>
 			</tr>
 		</thead>
@@ -40,7 +40,7 @@
 				<td><%=m.get("staffId")%></td>
 				<td><%=m.get("staffName")%></td>
 				<td><%=m.get("addressId")%></td>
-				<td><%=m.get("staffAddress")%></td>
+				<td><%=m.get("storeAddress")%></td>
 				<td><%=m.get("lastUpdate")%></td>
 			</tr>
 			<% 
