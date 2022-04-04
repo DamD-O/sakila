@@ -8,17 +8,17 @@ public class CustomerList {
 	private String phone;
 	private String city;
 	private String country;
-	private int active;
+	private int notes;
 	private int storeId;
-	
 	
 	@Override
 	public String toString() {
 		return "CustomerList [customerId=" + customerId + ", name=" + name + ", address=" + address + ", postalCode="
-				+ postalCode + ", phone=" + phone + ", city=" + city + ", country=" + country + ", active=" + active
+				+ postalCode + ", phone=" + phone + ", city=" + city + ", country=" + country + ", notes=" + notes
 				+ ", storeId=" + storeId + "]";
 	}
 	
+	//setter /getter
 	public int getCustomerId() {
 		return customerId;
 	}
@@ -61,11 +61,11 @@ public class CustomerList {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	public int getActive() {
-		return active;
+	public int getNotes() {
+		return notes;
 	}
-	public void setActive(int active) {
-		this.active = active;
+	public void setNotes(int notes) {
+		this.notes = notes;
 	}
 	public int getStoreId() {
 		return storeId;
@@ -73,6 +73,8 @@ public class CustomerList {
 	public void setStoreId(int storeId) {
 		this.storeId = storeId;
 	}
+	
+	
 	
 	
 }
