@@ -2,7 +2,7 @@ package vo;
 
 public class ActorInfo {
 	//필드 생성
-	private int avtorId;
+	private int actorId;
 	private String firstName;
 	private String lastName;
 	private String filmInfo;
@@ -10,16 +10,16 @@ public class ActorInfo {
 	//최상위클래스 공부 필요.
 	@Override
 	public String toString() {
-		return "ActorInfo [avtorId=" + avtorId + ", firstName=" + firstName + ", lastName=" + lastName + ", filmInfo="
+		return "ActorInfo [actorId=" + actorId + ", firstName=" + firstName + ", lastName=" + lastName + ", filmInfo="
 				+ filmInfo + "]";
 	}
 	
 	//setter & getter 생성
 	public int getAvtorId() {
-		return avtorId;
+		return actorId;
 	}
 	public void setAvtorId(int avtorId) {
-		this.avtorId = avtorId;
+		this.actorId = avtorId;
 	}
 	public String getFirstName() {
 		return firstName;
