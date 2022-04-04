@@ -54,7 +54,7 @@ public class CustomerListDao {
 		ResultSet rs = null;
 		//DB연결 호출
 		conn = DBUtil.getConnection();
-		String sql ="select customer_id customerId, conact(first_name, ' ',last_name) name, address, postal_code zipCode, phone, city, country, active notes, store_id storeId from customer_list order by customer_id LIMIT ?,? ";
+		String sql ="select ID customerId, name, address, `zip code` postalCode, phone, city, country, notes, SID storeId from customer_list order by ID LIMIT ?,? ";
 		
 		try {
 			stmt = conn.prepareStatement(sql); //쿼리실행
@@ -70,7 +70,7 @@ public class CustomerListDao {
 				c.setPhone(rs.getString("phone"));
 				c.setCity(rs.getString("city"));
 				c.setCountry(rs.getString("country"));
-				c.setActive(rs.getInt("active"));
+				c.setNotes(rs.getString("notes"));
 				c.setStoreId(rs.getInt("storeId"));
 				list.add(c); //c에 가져온값 저장
 				
@@ -82,7 +82,7 @@ public class CustomerListDao {
 				System.out.println(rs.getString("phone"));
 				System.out.println(rs.getString("city"));
 				System.out.println(rs.getString("country"));
-				System.out.println(rs.getInt("active"));
+				System.out.println(rs.getString("notes"));
 				System.out.println(rs.getInt("storeId"));
 				
 			}
