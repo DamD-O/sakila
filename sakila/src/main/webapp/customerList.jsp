@@ -23,7 +23,7 @@
 	//마지막 페이지
 	int lastPage = 0;
 	int totalRow = customerListDao.totalRow(); //dao에 생성된 메소드 호출
-	
+	System.out.println("총 행수 : " + totalRow);
 	//다음 페이지
 	//페이지가 rowPerPage로 나누어떨어지지 않으면 1페이지 추가
 	if(totalRow % rowPerPage == 0){
@@ -32,6 +32,7 @@
 	}else{
 		lastPage =(int)(Math.ceil((double)totalRow / (double)rowPerPage))+1;
 	}
+	System.out.println("마지막페이지 : " + lastPage);
 	
 %>
 <!DOCTYPE html>
