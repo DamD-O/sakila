@@ -12,7 +12,7 @@ import vo.CustomerList;
 
 public class CustomerListDao {
 	//총 행수 
-	public int totalRow(int beginRow, int rowPerPage) {
+	public int totalRow() {
 		//전체행의 개수
 		int totalRow =0;
 		//db자원 준비
@@ -45,7 +45,7 @@ public class CustomerListDao {
 	}
 	
 	//목록
-	public List<CustomerList> selectCustomerList(int beginPage, int rowPerPage){
+	public List<CustomerList> selectCustomerList(int beginRow, int rowPerPage){
 		List<CustomerList> list = new ArrayList<CustomerList>();
 		
 		//db자원 준비
@@ -58,7 +58,7 @@ public class CustomerListDao {
 		
 		try {
 			stmt = conn.prepareStatement(sql); //쿼리실행
-			stmt.setInt(1, beginPage);
+			stmt.setInt(1, beginRow);
 			stmt.setInt(2, rowPerPage);
 			rs = stmt.executeQuery(); //실행결과 저장 
 			while(rs.next()) {
