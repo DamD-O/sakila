@@ -44,4 +44,37 @@ public class ActorInfoDao {
 		}
 		return list;
 	}
+	
+	public int totalRow() {
+		int totalRow =0; //전체행의 개수
+		//db자원 준비
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		
+		conn = DBUtil.getConnection(); //DB호출
+		String sql = "select count(*) cnt from actor_info";
+		try {
+			stmt = conn.prepareStatement(sql);
+			rs = stmt.executeQuery();
+			if(rs.next()) {
+				totalRow = rs.getInt("cnt");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				//db자원 종료
+				rs.close();
+				stmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return totalRow;
+		
+		
+	}
 }
