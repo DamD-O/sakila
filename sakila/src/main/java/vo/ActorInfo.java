@@ -15,11 +15,11 @@ public class ActorInfo {
 	}
 	
 	//setter & getter 생성
-	public int getAvtorId() {
+	public int getActorId() {
 		return actorId;
 	}
-	public void setAvtorId(int avtorId) {
-		this.actorId = avtorId;
+	public void setActorId(int actorId) {
+		this.actorId = actorId;
 	}
 	public String getFirstName() {
 		return firstName;
