@@ -4,9 +4,7 @@
 <%@ page import = "vo.*" %>
 <%
 	int beginRow =0;
-	int rowPerPage =10; //페이지 당 행 개수
-	ActorInfoDao actorInfoDao = new ActorInfoDao(); //daoㅅ객체생성
-	List<ActorInfo> list= actorInfoDao.selectActorInfoListByPage(beginRow, rowPerPage);
+	int rowPerPage =10; //페이지 행 개수
 	
 	/*  페이지 이전 또는 다음 버튼  */
 	int curPage =1; //현재페이지 기본값
@@ -18,6 +16,10 @@
 	
 	//다음페이지 or 마지막 페이지
 	beginRow = (curPage-1)*rowPerPage; //이전 페이지의 행 개수는 현재페이지에서 1을 뺀 값에 한페이지당 행 개수(10)를 곱한다.?
+
+	ActorInfoDao actorInfoDao = new ActorInfoDao(); //daoㅅ객체생성
+	List<ActorInfo> list= actorInfoDao.selectActorInfoListByPage(beginRow, rowPerPage);
+	
 	int lastPage =0; //마지막 페이지
 	int totalRow = actorInfoDao.totalRow(); //총 행 개수 
 	
@@ -27,7 +29,6 @@
 	}else{
 		lastPage =(totalRow / rowPerPage )+1;
 	}
-	
 	
 %>
 <!DOCTYPE html>
