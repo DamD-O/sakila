@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 //공통되는 db
 public class DBUtil {
-	public Connection getConnection() {
+	public static Connection getConnection() { //필드가 없으므로 static으로 생성
 		Connection conn = null;
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");//드라이버 생성
