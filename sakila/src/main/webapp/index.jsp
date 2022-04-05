@@ -33,7 +33,7 @@
 			<div class="card-body">
 			<h4 class="card-title">배우 정보</h4>
 			<p class="card-text">배우들의 정보를 볼 수 있습니다.</p>
-			<a href="<%=request.getContextPath()%>/actorInfoList.jsp">배우 정보보기</a>
+			<a href="<%=request.getContextPath()%>/view/actorInfoList.jsp">배우 정보보기</a>
 			</div>
 		</div>
 		
@@ -44,7 +44,7 @@
 			<div class="card-body">
 			<h4 class="card-title">손님 정보</h4>
 			<p class="card-text">손님들의 정보를 볼 수 있습니다.</p>
-			<a href="<%=request.getContextPath()%>/customerList.jsp">손님 정보보기</a>
+			<a href="<%=request.getContextPath()%>/view/customerList.jsp">손님 정보보기</a>
 			</div>
 		</div>
 		<div class="card border border-dark"style= "background-color:#E0F8E0" >
@@ -52,7 +52,7 @@
 			<div class="card-body">
 			<h4 class="card-title">영화 정보</h4>
 			<p class="card-text">영화 정보를 볼 수 있습니다.</p>
-			<a href="<%=request.getContextPath()%>/filmList.jsp">영화 정보보기</a>
+			<a href="<%=request.getContextPath()%>/view/filmList.jsp">영화 정보보기</a>
 			</div>
 		</div>
 		<div class="card border border-dark" style= "background-color:#E0F8E0">
@@ -60,7 +60,7 @@
 			<div class="card-body">
 			<h4 class="card-title">매점영화정보</h4>
 			<p class="card-text">매점에 있는 영화 정보를 볼 수 있습니다.</p>
-			<a href="<%=request.getContextPath()%>/nicerButSlowerFilmList.jsp">매점 영화목록 보기</a>
+			<a href="<%=request.getContextPath()%>/view/nicerButSlowerFilmList.jsp">매점 영화목록 보기</a>
 			</div>
 		</div>
 	</div>
@@ -70,7 +70,7 @@
 			<div class="card-body">
 			<h4 class="card-title">영화 판매매출 정보</h4>
 			<p class="card-text">각 영화장르의 판매 매출을 볼 수 있습니다.</p>
-			<a href="<%=request.getContextPath()%>/salesByFilmCategory.jsp">영화 판매매출액보기</a>
+			<a href="<%=request.getContextPath()%>/view/salesByFilmCategory.jsp">영화 판매매출액보기</a>
 			</div>
 		</div>
 		<div class="card border border-dark"style= "background-color:#E0F8E0" >
@@ -78,7 +78,7 @@
 			<div class="card-body">
 			<h4 class="card-title">스태프의 상점 매출액 정보</h4>
 			<p class="card-text">스태프들의 매점 매출을 볼 수 있습니다.</p>
-			<a href="<%=request.getContextPath()%>/salesByStore.jsp">스태프 매출액보기</a>
+			<a href="<%=request.getContextPath()%>/view/salesByStore.jsp">스태프 매출액보기</a>
 			</div>
 		</div>
 		<div class="card border border-dark"style= "background-color:#E0F8E0" >
@@ -86,7 +86,7 @@
 			<div class="card-body">
 			<h4 class="card-title">스태프 정보(View)</h4>
 			<p class="card-text">스태프들의 개인정보를 볼 수 있습니다.</p>
-			<a href="<%=request.getContextPath()%>/staffListView.jsp">스태프 개인정보보기</a>
+			<a href="<%=request.getContextPath()%>/view/staffListView.jsp">스태프 개인정보보기</a>
 			</div>
 		</div>
 	</div>
@@ -97,7 +97,7 @@
 			<div class="card-body">
 			<h4 class="card-title">filmInStock</h4>
 			<p class="card-text">영화가 지정된 매점에 재고가 있는지 확인 할 수 있습니다.</p>
-			<a href="<%=request.getContextPath()%>/filmInStock.jsp">영화 재고보기</a>
+			<a href="<%=request.getContextPath()%>/procedure/filmInStock.jsp">영화 재고보기</a>
 			</div>
 		</div>
 		<div class="card border border-dark" style= "background-color:#E0F8E0">
@@ -105,7 +105,7 @@
 			<div class="card-body">
 			<h4 class="card-title">filmNotInStock</h4>
 			<p class="card-text">매점에 재고가 없는 영화를 확인 할 수 있습니다.</p>
-			<a href="<%=request.getContextPath()%>/filmNotInStock.jsp">영화 재고보기</a>
+			<a href="<%=request.getContextPath()%>/procedure/filmNotInStock.jsp">영화 재고보기</a>
 			</div>
 		</div>
 		<div class="card border border-dark" style= "background-color:#E0F8E0">
@@ -113,7 +113,7 @@
 			<div class="card-body">
 			<h4 class="card-title">rewardsReport</h4>
 			<p class="card-text">이전의 달에 상위고객에 대한 목록을 볼 수 있습니다.</p>
-			<a href="<%=request.getContextPath()%>/rewardsReport.jsp">상위고객 보기</a>
+			<a href="<%=request.getContextPath()%>/procedure/rewardsReport.jsp">상위고객 보기</a>
 			</div>
 		</div>
 	</div>
