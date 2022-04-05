@@ -96,7 +96,7 @@
 			<img class="card-img-top" src="<%=request.getContextPath()%>/img/stock.png" alt="Card image" style="width:100px">
 			<div class="card-body">
 			<h4 class="card-title">filmInStock</h4>
-			<p class="card-text">영화의 사본 지정된 저장소에 재고가 있는지 확인 할 수 있습니다.</p>
+			<p class="card-text">영화가 지정된 매점에 재고가 있는지 확인 할 수 있습니다.</p>
 			<a href="<%=request.getContextPath()%>/filmInStock.jsp">영화 재고보기</a>
 			</div>
 		</div>
@@ -104,7 +104,7 @@
 			<img class="card-img-top" src="<%=request.getContextPath()%>/img/rent.png" alt="Card image" style="width:100px">
 			<div class="card-body">
 			<h4 class="card-title">filmNotInStock</h4>
-			<p class="card-text">상점에 재고가 없는 영화의 대여(사본)가 있는지 확인 할 수 있습니다.</p>
+			<p class="card-text">매점에 재고가 없는 영화를 확인 할 수 있습니다.</p>
 			<a href="<%=request.getContextPath()%>/filmNotInStock.jsp">영화 재고보기</a>
 			</div>
 		</div>
