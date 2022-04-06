@@ -3,9 +3,10 @@
 <%@ page import = "dao.*" %>
 <%@ page import = "vo.*" %>
 <%
-   	SearchDao searchDao = new SearchDao();
+	CategoryDao searchDao = new CategoryDao();
 	List<Category> categoryList = searchDao.selectCategoryList();	
-	List<Double> priceList = searchDao.selectfilmPriceList();
+	FilmListDao filmListDao = new FilmListDao();
+	List<Double> priceList = filmListDao.selectfilmPriceList();
 %>
 <!DOCTYPE html>
 <html>
@@ -16,14 +17,14 @@
 </head>
 <body>
 <div class="container p-3 my-3 border border-dark">
-<ul class="nav justify-content-end bg-dark ">
+	<ul class="nav justify-content-end bg-dark ">
 		<li class="nav-item ">
 			<a href="<%=request.getContextPath()%>/index.jsp" class="nav-link text-white">HOME</a>
 		</li>
 	</ul>
 	<p><h2 class="text-dark">필름 목록(view) 검색</h2></p>
-   <form action="<%=request.getContextPath()%>/search/filmSearchAction.jsp" method="post" class="form-inline">
-      <table class="table table-striped">
+   <form action="<%=request.getContextPath()%>/search/filmSerachAction.jsp" method="post" class="form-inline">
+      <table class="table table-bordered">
          <tr>
             <td>category</td>
             <td>
