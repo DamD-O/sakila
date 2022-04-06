@@ -14,7 +14,7 @@
 			<span class="float-right border border-info">
 				<h5 class="text-right">
 					<img src="<%=request.getContextPath()%>/img/search.png" width="50px" >
-					<a href="<%=request.getContextPath()%>/storeList.jsp">검색하기</a>
+					<a href="<%=request.getContextPath()%>/search/filmSearchForm.jsp">검색하기</a>
 				</h5>
 			</span>
 		</div>
