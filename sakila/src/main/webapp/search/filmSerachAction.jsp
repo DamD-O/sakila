@@ -103,7 +103,7 @@
 		<%
 			if(curPage >1){
 		%>
-			<a href="<%=request.getContextPath()%>/view/filmSerachAction.jsp.jsp?curPage=<%=curPage-1%>&category=<%=category %>&rating=<%=rating %>&price=<%=price%>&length=<%=length%>&title=<%=title%>&actor=<%=actor%>" class="btn btn-outline-info">이전</a>
+			<a href="<%=request.getContextPath()%>/search/filmSerachAction.jsp.jsp?curPage=<%=curPage-1%>&category=<%=category %>&rating=<%=rating %>&price=<%=price%>&length=<%=length%>&title=<%=title%>&actor=<%=actor%>" class="btn btn-outline-info">이전</a>
 		<%
 			}
 		%>
@@ -111,7 +111,7 @@
 		<%
 		 	if(curPage < lastPage){
 		 %>
-		 	<a href="<%=request.getContextPath()%>/view/filmSerachAction.jsp.jsp?curPage=<%=curPage+1%>&category=<%=category %>&rating=<%=rating %>&price=<%=price%>&length=<%=length%>&title=<%=title%>&actor=<%=actor%>" class="btn btn-outline-info">다음</a>
+		 	<a href="<%=request.getContextPath()%>/search/filmSerachAction.jsp.jsp?curPage=<%=curPage+1%>&category=<%=category%>&rating=<%=rating%>&price=<%=price%>&length=<%=length%>&title=<%=title%>&actor=<%=actor%>" class="btn btn-outline-info">다음</a>
 		 <% 
 		 	}
 		System.out.println(curPage + ": curPage");
