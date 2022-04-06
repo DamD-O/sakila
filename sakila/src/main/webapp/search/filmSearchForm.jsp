@@ -3,10 +3,11 @@
 <%@ page import = "dao.*" %>
 <%@ page import = "vo.*" %>
 <%
-	CategoryDao searchDao = new CategoryDao();
-	List<Category> categoryList = searchDao.selectCategoryList();	
+	CategoryDao categoryDao = new CategoryDao();
+	List<Category> categoryList = categoryDao.selectCategoryList();	
 	FilmListDao filmListDao = new FilmListDao();
 	List<Double> priceList = filmListDao.selectfilmPriceList();
+	
 %>
 <!DOCTYPE html>
 <html>
