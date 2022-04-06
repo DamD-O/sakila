@@ -24,7 +24,7 @@ public class FilmListDao {
 			while(rs.next()) {
 				FilmList f = new FilmList();
 				f.setFilmId(rs.getInt("filmId"));
-				f.setTitle(rs.getString("tilte"));
+				f.setTitle(rs.getString("title"));
 				f.setDescription(rs.getString("description"));
 				f.setCategoryName(rs.getString("categoryName"));
 				f.setPrice(rs.getDouble("price"));
