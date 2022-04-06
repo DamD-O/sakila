@@ -1,25 +1,19 @@
 package vo;
 
 public class FilmList {
-	private int filmId;
+	private int fid;
 	private String title;
-	private String description;
-	private String categoryName;
+	private String desciption;
+	private String category;
 	private double price;
 	private int length;
 	private String rating;
-	private String actorName;
-	@Override
-	public String toString() {
-		return "FilmList [filmId=" + filmId + ", title=" + title + ", description=" + description + ", categoryName="
-				+ categoryName + ", price=" + price + ", length=" + length + ", rating=" + rating + ", actorName="
-				+ actorName + "]";
+	private String actors;
+	public int getFid() {
+		return fid;
 	}
-	public int getFilmId() {
-		return filmId;
-	}
-	public void setFilmId(int filmId) {
-		this.filmId = filmId;
+	public void setFid(int fid) {
+		this.fid = fid;
 	}
 	public String getTitle() {
 		return title;
@@ -27,17 +21,17 @@ public class FilmList {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getDescription() {
-		return description;
+	public String getDesciption() {
+		return desciption;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setDesciption(String desciption) {
+		this.desciption = desciption;
 	}
-	public String getCategoryName() {
-		return categoryName;
+	public String getCategory() {
+		return category;
 	}
-	public void setCategoryName(String categoryName) {
-		this.categoryName = categoryName;
+	public void setCategory(String category) {
+		this.category = category;
 	}
 	public double getPrice() {
 		return price;
@@ -57,12 +51,16 @@ public class FilmList {
 	public void setRating(String rating) {
 		this.rating = rating;
 	}
-	public String getActorName() {
-		return actorName;
+	public String getActors() {
+		return actors;
 	}
-	public void setActorName(String actorName) {
-		this.actorName = actorName;
+	public void setActors(String actors) {
+		this.actors = actors;
 	}
-	
+	@Override
+	public String toString() {
+		return "FilmList [fid=" + fid + ", title=" + title + ", desciption=" + desciption + ", category=" + category
+				+ ", price=" + price + ", length=" + length + ", rating=" + rating + ", actors=" + actors + "]";
+	}
 	
 }
