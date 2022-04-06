@@ -10,6 +10,14 @@
 <body>
 <div class="container p-3 my-3 border border-dark" style= "background-color:#E0F2F7">
 	<h1 class="font-weight-bold text-center border border-dark" style="padding: 10px; background-color:#A9E2F3 ; color: #58ACFA">HOME</h1>
+		<div class="clearfix">
+			<span class="float-right border border-info">
+				<h5 class="text-right">
+					<img src="<%=request.getContextPath()%>/img/search.png" width="50px" >
+					<a href="<%=request.getContextPath()%>/storeList.jsp">검색하기</a>
+				</h5>
+			</span>
+		</div>
 	<div class="card-deck" style="padding: 10px">
 		<div class="card border border-dark" style= "background-color:#E0F8E0" >
 		<img class="card-img-top " src="<%=request.getContextPath()%>/img/store.png" alt="Card image" style="width:100px">
