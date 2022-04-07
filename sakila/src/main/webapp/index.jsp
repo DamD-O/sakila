@@ -76,8 +76,8 @@
 		<div class="card border border-dark" style= "background-color:#E0F8E0">
 			<img class="card-img-top" src="<%=request.getContextPath()%>/img/filmstore.png" alt="Card image" style="width:100px">
 			<div class="card-body">
-			<h4 class="card-title">매점영화정보</h4>
-			<p class="card-text">매점에 있는 영화 정보를 볼 수 있습니다.</p>
+			<h4 class="card-title">영화정보</h4>
+			<p class="card-text">영화 정보를 볼 수 있습니다.(배우 이름이 Pascal표기법으로 되어있음.)</p>
 			<a href="<%=request.getContextPath()%>/view/nicerButSlowerFilmList.jsp">매점 영화목록 보기</a>
 			</div>
 		</div>
