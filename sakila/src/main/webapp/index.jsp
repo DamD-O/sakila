@@ -11,12 +11,22 @@
 <div class="container p-3 my-3 border border-dark" style= "background-color:#E0F2F7">
 	<h1 class="font-weight-bold text-center border border-dark" style="padding: 10px; background-color:#A9E2F3 ; color: #58ACFA">HOME</h1>
 		<div class="clearfix">
-			<span class="float-right border border-info">
-				<h5 class="text-right">
-					<img src="<%=request.getContextPath()%>/img/search.png" width="50px" >
-					<a href="<%=request.getContextPath()%>/search/filmSearchForm.jsp">검색하기</a>
-				</h5>
-			</span>
+			<table class="float-right border border-info">
+				<tr>
+					<td>
+						<h6 class="text-right">
+						<img src="<%=request.getContextPath()%>/img/search.png" width="35px" >
+						<a href="<%=request.getContextPath()%>/search/filmSearchForm.jsp">영화 검색하기</a>
+						</h6>
+					</td>
+					<td>
+						<h6 class="text-right">
+						<img src="<%=request.getContextPath()%>/img/search.png" width="35px" >
+						<a href="<%=request.getContextPath()%>/search/rentalSearchForm.jsp">대여 상세검색</a>
+						</h6>
+					</td>
+				</tr>				
+			</table>
 		</div>
 	<div class="card-deck" style="padding: 10px">
 		<div class="card border border-dark" style= "background-color:#E0F8E0" >
