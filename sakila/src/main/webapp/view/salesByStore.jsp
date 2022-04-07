@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 </head>
 <body>
-	<div class="container p-3 my-3 border border-dark">
+<div class="container p-3 my-3 border border-dark">
 <ul class="nav justify-content-end bg-dark ">
 		<li class="nav-item ">
 			<a href="<%=request.getContextPath()%>/index.jsp" class="nav-link text-white">HOME</a>
