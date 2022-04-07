@@ -3,7 +3,6 @@
 <%@ page import="java.util.*" %>
 <%@ page import="dao.*" %>
 <%@ page import="vo.*" %>
-<%@ page import="java.text.*"%>
 <%
 	int beginRow =0; //이전페이지의 행
 	int rowPerPage =10; //처음 한페이지 행수
@@ -36,7 +35,6 @@
 	}
 	System.out.println("마지막페이지 : " + lastPage);
 	
-	 DecimalFormat format = new DecimalFormat("0.00");
 
 %>
 <!DOCTYPE html>
