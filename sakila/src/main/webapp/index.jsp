@@ -11,7 +11,7 @@
 <div class="container p-3 my-3 border border-dark" style= "background-color:#E0F2F7">
 	<h1 class="font-weight-bold text-center border border-dark" style="padding: 10px; background-color:#A9E2F3 ; color: #58ACFA">HOME</h1>
 		<div class="clearfix">
-			<table class="float-right border border-info">
+			<table>
 				<tr>
 					<td>
 						<h6 class="text-right">
