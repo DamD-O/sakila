@@ -39,7 +39,7 @@
 <title>actorInfo</title>
 </head>
 <body>
-<div class="container p-3 my-3 border border-dark">
+<div class="container p-3 my-3 border border-dark table-responsive">
 	<ul class="nav justify-content-end bg-dark ">
 		<li class="nav-item ">
 			<a href="<%=request.getContextPath()%>/index.jsp" class="nav-link text-white">HOME</a>
