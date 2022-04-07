@@ -65,14 +65,14 @@
 				for(FilmList f :list){
 			%>
 				<tr>
-				<td><%=f.getFilmId()%></td>
+				<td><%=f.getFid()%></td>
 				<td><%=f.getTitle()%></td>
 				<td><%=f.getDescription()%></td>
-				<td><%=f.getCategoryName()%></td>
+				<td><%=f.getCategory()%></td>
 				<td><%=f.getPrice()%></td>
 				<td><%=f.getLength() %></td>
 				<td><%=f.getRating()%></td>
-				<td><%=f.getActorName()%></td>
+				<td><%=f.getActors()%></td>
 				</tr>
 			<%		
 				}
