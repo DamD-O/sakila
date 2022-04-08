@@ -2,9 +2,11 @@ package dao;
 import java.util.*;
 
 import util.DBUtil;
+import vo.Store;
 
 import java.sql.*;
 public class StoreDao {
+	//store목록
 	public List<Map<String, Object>> selctStoreList(){ //다형성, List라는 인터페이스로 받음
 		//ArrayList는 인터페이스의 구현체 중 하나이다.(List가 부모이다)
 		//HasMap은 Map 인터페이스의 구현체 중 하나이다
@@ -68,5 +70,13 @@ public class StoreDao {
 			System.out.println(m.get("lastUpdate")+ " ");
 			System.out.println("테스트 끝");
 		}
+	}
+	//storeId
+	public List<Integer> selectStoreIdList(){
+		List<Integer> list = new ArrayList<Integer>();
+		
+		
+		return list;
+		
 	}
 }
