@@ -14,8 +14,7 @@
 	List<Map<String,Object>> filmCountByLanguage =statsDataDao.filmCountByLanguage();
 	//5.
 	List<Map<String, Object>> filmCountByLength =statsDataDao.filmCountByLength();
-	//6.
-	//7.
+
 %>
 <!DOCTYPE html>
 <html>
