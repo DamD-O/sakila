@@ -10,7 +10,10 @@
 	List<Map<String,Object>> filmCountByRentalRate =statsDataDao.filmCountByRentalRate();
 	//3.rating별 영화 개수
 	List<Map<String,Object>> filmCountByRating =statsDataDao.filmCountByRating();
-
+	//4.language별 영화 개수
+	List<Map<String,Object>> filmCountByLanguage =statsDataDao.filmCountByLanguage();
+	//5.
+	List<Map<String, Object>> filmCountByLength =statsDataDao.filmCountByLength();
 %>
 <!DOCTYPE html>
 <html>
@@ -74,6 +77,42 @@
 		%>
 		<tr>
 			<td><%=m.get("rating") %></td>
+			<td><%=m.get("cnt") %></td>
+		</tr>
+		<% 		
+			}
+		%>
+	</table>
+	
+	<p><h3 class="text-dark">lanauge별 영화개수</h3></p>
+	<table  class="table table-bordered table-sm">
+		<tr>
+			<th>언어</th>
+			<th>총 개수</th>
+		</tr>
+		<%
+		for(Map<String,Object> m : filmCountByLanguage){
+		%>
+		<tr>
+			<td><%=m.get("language") %></td>
+			<td><%=m.get("cnt") %></td>
+		</tr>
+		<% 		
+			}
+		%>
+	</table>
+	
+	<p><h3 class="text-dark">Length별 영화개수(구간)</h3></p>
+	<table  class="table table-bordered table-sm">
+		<tr>
+			<th>영화 시간(구간)</th>
+			<th>총 개수</th>
+		</tr>
+		<%
+		for(Map<String,Object> m : filmCountByLength){
+		%>
+		<tr>
+			<td><%=m.get("length") %></td>
 			<td><%=m.get("cnt") %></td>
 		</tr>
 		<% 		

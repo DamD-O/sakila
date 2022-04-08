@@ -89,7 +89,7 @@ public class StatsDataDao {
 		return list;
 	}
 	public List<Map<String,Object>> filmCountByRating(){
-List<Map<String, Object>> list = new ArrayList<Map<String,Object>>();
+		List<Map<String, Object>> list = new ArrayList<Map<String,Object>>();
 		
 		//db자원 준비
 		Connection conn = null;
@@ -123,5 +123,81 @@ List<Map<String, Object>> list = new ArrayList<Map<String,Object>>();
 			}
 		}
 		return list;
+	}
+	public List<Map<String,Object>> filmCountByLanguage(){
+		List <Map<String, Object>> list = new ArrayList<Map<String,Object>>();
+		//db자원 준비
+				Connection conn = null;
+				PreparedStatement stmt = null;
+				ResultSet rs = null;
+				//db연결
+				conn = DBUtil.getConnection();
+				String sql="SELECT l.name language, COUNT(*)cnt"
+						+ " FROM film f INNER JOIN language l"
+						+ " ON f.language_id = l.language_id"
+						+ " GROUP BY l.name";
+				
+				try {
+					stmt= conn.prepareStatement(sql);
+					rs= stmt.executeQuery();
+					while(rs.next()) {
+						Map<String, Object> m = new HashMap<String, Object>();
+						m.put("language", rs.getString("language"));
+						m.put("cnt", rs.getInt("cnt"));
+						list.add(m);
+					}
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}finally {
+					try {
+						rs.close();
+						stmt.close();
+						conn.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				}
+				return list;
+			}
+	public List<Map<String,Object>> filmCountByLength(){
+		List <Map<String, Object>> list = new ArrayList<Map<String,Object>>();
+		//db자원 준비
+				Connection conn = null;
+				PreparedStatement stmt = null;
+				ResultSet rs = null;
+				//db연결
+				conn = DBUtil.getConnection();
+				String sql="SELECT t.length2 length, COUNT(*) cnt"
+						+ " FROM (SELECT title, LENGTH, "
+						+ " CASE WHEN LENGTH < 60 THEN '.60m under'"
+						+ "	WHEN LENGTH BETWEEN 61 AND 120 THEN '1~2h'"
+						+ "	WHEN LENGTH BETWEEN 121 AND 180 THEN '2~3h'"
+						+ "	ELSE 'More than 3h '"
+						+ "	END LENGTH2"
+						+ " FROM film) t"
+						+ " GROUP BY t.LENGTH2"
+						+ " ORDER BY LENGTH2 ASC";
+				
+				try {
+					stmt= conn.prepareStatement(sql);
+					rs= stmt.executeQuery();
+					while(rs.next()) {
+						Map<String, Object> m = new HashMap<String, Object>();
+						m.put("length", rs.getString("length"));
+						m.put("cnt", rs.getInt("cnt"));
+						list.add(m);
+					}
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}finally {
+					try {
+						rs.close();
+						stmt.close();
+						conn.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+				}
+				return list;
 	}
 }
