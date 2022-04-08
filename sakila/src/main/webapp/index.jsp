@@ -24,6 +24,12 @@
 						<a href="<%=request.getContextPath()%>/search/rentalSearchForm.jsp">대여 상세검색</a>
 						</h6>
 					</td>
+					<td>
+						<h6 class="text-right">
+						<img src="<%=request.getContextPath()%>/img/stats.png" width="35px" >
+						<a href="<%=request.getContextPath()%>/statistics/statsData.jsp">통계</a>
+						</h6>
+					</td>
 				</tr>				
 			</table>
 		</div>
