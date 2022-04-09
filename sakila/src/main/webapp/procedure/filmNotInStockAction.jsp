@@ -6,12 +6,12 @@
 	//인코딩
 	request.setCharacterEncoding("utf-8"); 
 
-	FilmInStockDao filmInStockDao = new FilmInStockDao(); //객체생성
+	FilmNotInStockDao filmNotInStockDao = new FilmNotInStockDao(); //객체생성
 	//값 가져오기
 	int filmId = Integer.parseInt(request.getParameter("filmId"));
 	int storeId = Integer.parseInt(request.getParameter("storeId"));
 	
-	Map<String, Object> map = filmInStockDao.filmInStockCall(filmId, storeId);
+	Map<String, Object> map = filmNotInStockDao.filmNotInStockCall(filmId, storeId);
 	List<Integer> list = (List<Integer>) map.get("list");
 	int count = (Integer) map.get("count");
 	
