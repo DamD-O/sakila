@@ -2,7 +2,6 @@
 <%@ page import="java.util.*" %>
 <%@ page import="dao.*" %>
 <%@ page import="vo.*" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,9 +22,6 @@
 		</table>
 		<button type="submit" class="btn btn-primary">재고 확인</button>	
 	</form>
-
-
-
 </div>
 </body>
 </html>
