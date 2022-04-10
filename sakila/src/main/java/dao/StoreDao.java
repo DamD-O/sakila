@@ -72,8 +72,37 @@ public class StoreDao {
 	//storeId
 	public List<Integer> selectStoreIdList(){
 		List<Integer> list = new ArrayList<Integer>();
+		//db자원 준비
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
 		
-		
+		Integer count = 0;
+		//db호출
+		conn=DBUtil.getConnection();
+		//쿼리작선 및 실행
+		try {
+			String sql = " SELECT store_id storeId From store;";
+			stmt = conn.prepareStatement(sql);
+			rs = stmt.executeQuery();
+
+			while(rs.next()) {
+				count = rs.getInt("storeId");
+				list.add(count);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				rs.close();
+				stmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+
 		return list;
 		
 	}
