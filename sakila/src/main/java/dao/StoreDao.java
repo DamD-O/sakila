@@ -1,8 +1,6 @@
 package dao;
 import java.util.*;
-
 import util.DBUtil;
-import vo.Store;
 
 import java.sql.*;
 public class StoreDao {
