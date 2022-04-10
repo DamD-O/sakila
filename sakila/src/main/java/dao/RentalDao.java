@@ -11,14 +11,15 @@ public class RentalDao {
 		Connection conn = null;
 		PreparedStatement stmt =null;
 		ResultSet rs = null;
-		conn = DBUtil.getConnection();
+	
 		//db연결
 		try {
+			conn = DBUtil.getConnection();
 			//쿼리
-			String sql = "SELECT r.*"
-					+ "	 CONCAT (c.first_name,' ', c.last_name) customerName, r.rental_date rentalDate, "
+			String sql = "SELECT r.rental_id rentalId, r.rental_date rentalDate, r.inventory_id inventoryId, r.customer_id customerId, "
+					+ "	 CONCAT(c.first_name,' ',c.last_name) customerName, r.rental_date rentalDate, "
 					+ "  r.return_date returnDate, "
-					+ "  s.store_id storeId, i.film_id filmId, f.title"
+					+ "  s.store_id storeId, r.staff_id staffId,r.last_update lastUpdate,  i.film_id filmId, f.title"
 					+ "	 FROM rental r INNER JOIN customer c"
 					+ "	 ON r.customer_id = c.customer_id"
 					+ "	 INNER JOIN staff s"
@@ -28,10 +29,7 @@ public class RentalDao {
 					+ "	 INNER JOIN film f"
 					+ "	 ON i.film_id = f.film_id"
 					+"	 WHERE CONCAT(c.first_name,' ',c.last_name) LIKE ?";
-		        //  +"  WHERE s.store_id=? AND CONCAT(c.first_name,' ',c.last_name) LIKE ?"
-		        //  +"  AND r.rental_date BETWEEN STR_TO_DATE(?,'%Y-%m-%d') "
-		        //  +"  AND STR_TO_DATE(?,'%Y-%m-%d')";
-			
+	
 			//디버깅
 			System.out.println("storeId : "+storeId);
 			System.out.println("customerName : "+customerName);
@@ -86,13 +84,13 @@ public class RentalDao {
 
 			while(rs.next()){ //다음행이 있을때 값가져오기
 				Map<String, Object> map = new HashMap<>();
-				map.put("rentalId", rs.getString("rental_id"));
-				map.put("rentalDate", rs.getString("rental_date"));
-				map.put("inventoryId", rs.getString("inventory_id"));
-				map.put("customerId", rs.getString("customer_id"));
-				map.put("returnDate", rs.getString("return_date"));
-				map.put("staffId", rs.getInt("staff_id"));
-				map.put("lastUpdate", rs.getString("last_update"));
+				map.put("rentalId", rs.getInt("rentalId"));
+				map.put("rentalDate", rs.getString("rentalDate"));
+				map.put("inventoryId", rs.getString("inventoryId"));
+				map.put("customerId", rs.getInt("customerId"));
+				map.put("returnDate", rs.getString("returnDate"));
+				map.put("staffId", rs.getInt("staffId"));
+				map.put("lastUpdate", rs.getString("lastUpdate"));
 				map.put("customerName", rs.getString("customerName"));
 				map.put("storeId", rs.getInt("storeId"));
 				map.put("filmId", rs.getInt("filmId"));
