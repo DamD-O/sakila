@@ -2,6 +2,8 @@ package dao;
 import java.sql.*;
 import java.util.*;
 
+import util.DBUtil;
+
 public class StaffDao {
 	public List<Map<String, Object>> selctStaffList(){ //다형성, List라는 인터페이스로 받음
 		//ArrayList는 인터페이스의 구현체 중 하나이다.(List가 부모이다)
@@ -14,7 +16,7 @@ public class StaffDao {
 		//예외처리
 		try {
 			Class.forName("org.mariadb.jdbc.Driver"); //드라이버 생성
-			conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/sakila","root","java1234");
+			conn = DBUtil.getConnection();
 			String sql = "SELECT s1.staff_id staffId, "
 					+ " concat(s1.first_name,' ', s1.last_name) staffName,"
 					+ " concat(a.address, IFNULL(a.address2,' '), district) staffAddress, "
